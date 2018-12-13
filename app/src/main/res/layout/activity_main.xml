@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Nathanael Borketey-Kwaku 216CS01003630-->
+
+<ScrollView android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin"
+            android:text="Spool Order Services"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Name"
+                android:id="@+id/nameLabel" />
+
+            <EditText
+                android:id="@+id/editName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text"
+                android:layout_toRightOf="@+id/nameLabel"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Address"
+                android:id="@+id/addressLabel"
+                android:layout_below="@+id/editName"/>
+
+            <EditText
+                android:id="@+id/editAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPostalAddress"
+                android:layout_toRightOf="@+id/addressLabel"
+                android:layout_below="@+id/editName"/>
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Email"
+                android:id="@+id/emaiLabel"
+                android:layout_below="@+id/editAddress"/>
+
+            <EditText
+                android:id="@+id/editEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:layout_toRightOf="@+id/emaiLabel"
+                android:layout_below="@+id/editAddress"/>
+
+            />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Company Email"
+                android:id="@+id/locLabel"
+                android:layout_below="@+id/editEmail"/>
+
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radioLocation"
+                android:orientation="horizontal"
+                android:layout_below="@+id/locLabel">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local"
+                    android:id="@+id/locLocal"/>
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="International"
+                    android:id="@+id/locInternational"/>
+
+            </RadioGroup>
+
+        </RelativeLayout>
+
+        <!--Separator-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/order_information"
+            android:textSize="@dimen/default_order"
+            android:textColor="@color/colorPrimaryDark"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of Spools ordered"
+                android:id="@+id/numSpoolLabel"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/editNumSpool"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_toRightOf="@+id/numSpoolLabel"/>
+
+            <CheckBox android:id="@+id/chkRushDelivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_below="@id/editNumSpool"
+                android:text="Rush Delivery"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of spools in stock"
+                android:id="@+id/numStockLabel"
+                android:layout_below="@id/chkRushDelivery"
+                android:inputType="number"/>
+
+            <EditText
+                android:id="@+id/editNumStock"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:layout_toRightOf="@+id/numStockLabel"
+                android:layout_below="@id/chkRushDelivery"/>
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/btnCalculate"
+            android:background="@color/colorAccent"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calculate"
+            android:id="@+id/btnClear"
+            android:background="@color/colorAccent"
+            android:layout_marginTop="@dimen/button_margin_top"/>
+
+    </LinearLayout>
+
+</ScrollView>

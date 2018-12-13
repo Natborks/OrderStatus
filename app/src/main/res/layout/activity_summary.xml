@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/default_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Summary Of Order"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="36dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_margin="@dimen/default_margin"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="calculating and displaying results for chosen fields"
+                android:layout_gravity="center" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_lines">
+
+                <TextView
+                    android:id="@+id/numSpoolsLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Number of Spools"
+                    android:textSize="@dimen/secondaryTextSize"/>
+
+                <TextView
+                    android:id="@+id/txtNumSpools"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/four_dollars"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_lines">
+
+                <TextView
+                    android:id="@+id/backOrderlabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:hint="Number of spools on back order: "
+                    android:textSize="@dimen/secondaryTextSize"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/tv_margin_top"/>
+
+                <TextView
+                    android:id="@+id/numBackOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/four_dollars"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_lines">
+
+                <TextView
+                    android:id="@+id/shippingLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:hint="Shipping and handling:"
+                    android:textSize="@dimen/secondaryTextSize"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/primaryText"
+                    android:layout_marginTop="@dimen/tv_margin_top"/>
+
+                <TextView
+                    android:id="@+id/shippingTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/four_dollars"
+                    android:textSize="20sp"
+                    android:textColor="@color/primaryText"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/text_lines">
+
+                <TextView
+                    android:id="@+id/totalAmtLabel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:hint="Total:"
+                    android:textSize="@dimen/secondaryTextSize"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginTop="@dimen/tv_margin_top"/>
+
+                <TextView
+                    android:id="@+id/totalAmtTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="@string/four_dollars"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorAccent"
+                    />
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/colorPrimaryDark"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:text="Submit"
+                android:onClick="checkout"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
